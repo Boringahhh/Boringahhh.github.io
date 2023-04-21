@@ -31,6 +31,11 @@
   content: ''
 }
 
+[data-theme=light] #footer:before {
+  background-color: rgba(0,0,0,.25)!important;
+  z-index: -3
+}
+
 
 
 /* 页脚样式 */
