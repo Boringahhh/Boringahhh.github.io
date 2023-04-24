@@ -13,7 +13,17 @@
 #page-header::before {
   background: transparent !important;
 }
-
+#page-header:not(.not-top-img):before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.3);
+  content: '';
+}
+[data-theme=light] #page-header:before {
+  background-color: rgba(0,0,0,.2)!important;
+  z-index: -3;
+}
 /* 夜间模式遮罩透明 */
 [data-theme="dark"] #footer::before {
   background: transparent !important;
@@ -378,25 +388,6 @@ div#archive {
 
 
 
-/* 一级菜单居中 */
-#nav .menus_items {
-  position: absolute !important;
-  width: fit-content !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-}
-/* 子菜单横向展示 */
-#nav .menus_items .menus_item:hover .menus_item_child {
-  display: flex !important;
-}
-/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
-.menus_items .menus_item:nth-child(2) .menus_item_child {
-  left: -125px;
-}
-
-
-
-
 
 /* twikoo评论美化 */
 /* 自定义twikoo评论输入框高度 */
@@ -546,3 +537,52 @@ div#archive {
   transform: translate(-50%, -48px);
 }
 
+/* 小冰分类分类磁铁黑夜模式适配 */
+/* 一般状态 */
+[data-theme="dark"] .magnet_link_context {
+  background: #1e1e1e;
+  color: antiquewhite;
+}
+/* 鼠标悬浮状态 */
+[data-theme="dark"] .magnet_link_context:hover {
+  background: #3ecdf1;
+  color: #f2f2f2;
+}
+
+/* 表情包放大 */
+#owo-big {
+  position: fixed;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px #aaa solid;
+  border-radius: 10px;
+  z-index: 9999;
+  display: none;
+  transform: translate(0, -105%);
+  overflow: hidden;
+  animation: owoIn 0.3s cubic-bezier(0.42, 0, 0.3, 1.11);
+}
+
+[data-theme=dark] #owo-big {
+  background-color: #4a4a4a
+}
+
+#owo-big img {
+  width: 100%;
+}
+
+/* 动画效果代码由 Heo：https://blog.zhheo.com/ 提供 */
+@keyframes owoIn {
+  0% {
+      transform: translate(0, -95%);
+      opacity: 0;
+  }
+  100% {
+      transform: translate(0, -105%);
+      opacity: 1;
+  }
+}
+
+#pagination .page-number.current {
+  background: #49b1f5;
+}
