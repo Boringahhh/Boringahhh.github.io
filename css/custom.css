@@ -1,13 +1,13 @@
 /* 页脚与头图透明 */
-#footer {
+/* #footer {
   background: transparent !important;
-}
-#page-header {
+} */
+/* #page-header {
   background: transparent !important;
-}
+} */ 
 
 /* 白天模式遮罩透明 */
-#footer::before {
+/* #footer::before {
   background: transparent !important;
 }
 #page-header::before {
@@ -19,18 +19,18 @@
   height: 100%;
   background-color: rgba(0,0,0,.3);
   content: '';
-}
-[data-theme=light] #page-header:before {
+} */
+/* [data-theme=light] #page-header:before {
   background-color: rgba(0,0,0,.2)!important;
   z-index: -3;
-}
+} */
 /* 夜间模式遮罩透明 */
-[data-theme="dark"] #footer::before {
+/* [data-theme="dark"] #footer::before {
   background: transparent !important;
 }
 [data-theme="dark"] #page-header::before {
   background: transparent !important;
-}
+} */
 
 
 /* 页脚遮罩 */
@@ -89,45 +89,46 @@ div#archive {
   backdrop-filter: var(--backdrop-filter);
 } */
 
-[data-theme="dark"] #page-header.nav-fixed #nav {
+
+/* [data-theme="dark"] #page-header.nav-fixed #nav {
   background: rgba(0, 0, 0, 0.7) !important;
-}
+} */
 
 /* 夜间模式遮罩 */
-[data-theme="dark"] #recent-posts > .recent-post-item,
+/* [data-theme="dark"] #recent-posts > .recent-post-item,
 [data-theme="dark"] #aside-content .card-widget,
 [data-theme="dark"] div#post,
 [data-theme="dark"] div#archive,
 [data-theme="dark"] div#page {
   background: var(--trans-dark);
-}
+} */
 
 
 /* 夜间模式页脚页头遮罩透明 */
-[data-theme="dark"] #footer::before {
+/* [data-theme="dark"] #footer::before {
   background: transparent !important;
 }
 [data-theme="dark"] #page-header::before {
   background: transparent !important;
-}
+} */
 
 /* 阅读模式 */
-.read-mode #aside-content .card-widget {
+/* .read-mode #aside-content .card-widget {
   background: rgba(158, 204, 171, 0.5) !important;
 }
 .read-mode div#post {
   background: rgba(158, 204, 171, 0.5) !important;
-}
+} */
 
 /* 夜间模式下的阅读模式 */
-[data-theme="dark"] .read-mode #aside-content .card-widget {
+/* [data-theme="dark"] .read-mode #aside-content .card-widget {
   background: rgba(25, 25, 25, 0.9) !important;
   color: #ffffff;
 }
 [data-theme="dark"] .read-mode div#post {
   background: rgba(25, 25, 25, 0.9) !important;
   color: #ffffff;
-}
+} */
 
 
 
@@ -566,6 +567,6 @@ div#archive {
   }
 }
 
-/* #pagination .page-number.current {
-  background: #49b1f5;
-} */
+#pagination .page-number.current {
+  background: #000000;
+}
