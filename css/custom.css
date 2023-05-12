@@ -1,7 +1,7 @@
 /* 页脚与头图透明 */
-/* #footer {
-  background: transparent !important;
-} */
+#footer {
+  background: #000000;
+}
 /* #page-header {
   background: transparent !important;
 } */ 
