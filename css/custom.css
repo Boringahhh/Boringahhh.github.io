@@ -1,53 +1,3 @@
-/* 页脚与头图透明 */
-#footer {
-  background: transparent !important;
-}
-#page-header {
-  background: transparent !important;
-}
-
-/* 白天模式遮罩透明 */
-#footer::before {
-  background: transparent !important;
-}
-#page-header::before {
-  background: transparent !important;
-}
-#page-header:not(.not-top-img):before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,.3);
-  content: '';
-}
-[data-theme=light] #page-header:before {
-  background-color: rgba(0,0,0,.2)!important;
-  z-index: -3;
-}
-
-/* 夜间模式遮罩透明 */
-[data-theme="dark"] #footer::before {
-  background: transparent !important;
-}
-[data-theme="dark"] #page-header::before {
-  background: transparent !important;
-}
-
-
-/* 页脚遮罩 */
-#footer:before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,.3);
-  content: ''
-}
-
-[data-theme=light] #footer:before {
-  background-color: rgba(0,0,0,.25)!important;
-  z-index: -3
-}
-
 
 /* 翻页按钮居中 */
 #pagination {
@@ -55,8 +5,17 @@
   margin: auto;
 }
 
-
-
+@media screen and (min-width: 600px) {
+  .blog-slider__img {
+    width: 36%!important;
+    height: 100%!important;
+  }
+}
+@media screen and (min-width: 600px) {
+  .blog-slider {
+    height: 260px!important;
+  }
+}
 
 
 /* twikoo评论美化 */
@@ -315,20 +274,12 @@
   left: 50% !important;
   transform: translateX(-50%) !important;
 }
-/* 子菜单横向展示 */
-#nav .menus_items .menus_item:hover .menus_item_child {
-  display: flex !important;
-}
-/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
-.menus_items .menus_item:nth-child(2) .menus_item_child {
-  left: -125px;
-}
 
 
 /* 标题增强 */
 #site-name::before {
   opacity: 0;
-  background-color: var(--theme-color) !important;
+  background-color: var(--btn-bg) !important;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -345,12 +296,12 @@
   width: 100%;
   height: 100%;
   content: "\f015";
-  box-shadow: 0 0 5px var(--theme-color);
+  box-shadow: 0 0 5px var(--btn-bg);
   font-family: "Font Awesome 6 Free";
   text-align: center;
   color: white;
-  line-height: 34px; /*如果有溢出或者垂直不居中的现象微调一下这个参数*/
-  font-size: 18px; /*根据个人喜好*/
+  line-height: 34px;
+  font-size: 18px; 
 }
 #site-name:hover::before {
   opacity: 1;
@@ -358,7 +309,7 @@
 }
 #site-name {
   position: relative;
-  font-size: 24px; /*一定要把字体调大点，否则效果惨不忍睹！*/
+  font-size: 24px; 
 }
 
 .nav-fixed #nav{
@@ -387,15 +338,15 @@
   top: 0;
   left: 0;
   content: "回到顶部";
-  background-color: var(--theme-color);
+  background-color: var(--btn-bg);
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   opacity: 0;
-  box-shadow: 0 0 3px var(--theme-color);
-  line-height: 45px; /*如果垂直位置不居中可以微调此值，也可以删了*/
+  box-shadow: 0 0 3px var(--btn-bg);
+  line-height: 45px; 
 }
 #page-name:hover:before {
   opacity: 1;
@@ -412,7 +363,7 @@
 }
 #page-name {
   position: relative;
-  padding: 10px 30px; /*如果文字间隔不合理可以微调修改，第二个是水平方向的padding，第一个是垂直的*/
+  padding: 10px 30px;
 }
 #nav{
     padding: 0 20px;
