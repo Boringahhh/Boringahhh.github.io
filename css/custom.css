@@ -88,7 +88,7 @@
 }
 
 #twikoo .OwO-items li img {
-  width: 100% !important;
+  width: 50% !important;
 }
 
 .tk-comment .vemoji[alt|="Menhera"],
@@ -316,6 +316,14 @@
   left: 50% !important;
   transform: translateX(-50%) !important;
 }
+/* 子菜单横向展示 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex !important;
+}
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+  left: -125px;
+}
 
 
 /* 标题增强 */
@@ -422,4 +430,10 @@ center#name-container {
   center#name-container {
     display: none;
   }
+}
+
+@font-face{
+  font-family: 'Varela Round';
+  font-display: swap;
+  src: url('https://picgo.leginn.top/fonts/VarelaRound.woff2') format("truetype");
 }
